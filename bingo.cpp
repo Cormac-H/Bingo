@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
-#include <stdio.h> 
+#include <stdio.h>
+#include <ctime> 
+#include <random>
 #include <stdlib.h>
 #include <vector>
 using namespace std;
@@ -54,10 +56,12 @@ int main()
 "  \\ \\  /\\  / /| |__  | |   | |   | |  | | \\  / | |__       | | | |  | | | |_) || | |  \\| | |  __| |  | | " << endl <<
 "   \\ \\/  \\/ / |  __| | |   | |   | |  | | |\\/| |  __|      | | | |  | | |  _ < | | | . ` | | |_ | |  | |" << endl <<
 "    \\  /\\  /  | |____| |___| |___| |__| | |  | | |____     | | | |__| | | |_) || |_| |\\  | |__| | |__| |" << endl <<
-"     \\/  \\/   |______|______\\_____\\____/|_|  |_|______|    |_|  \\____/  |____/_____|_| \\_|\\_____|\\____/ " << endl;
+"     \\/  \\/   |______|______\\_____\\____/|_|  |_|______|    |_|  \\____/  |____/_____|_| \\_|\\_____|\\____/ " << endl << endl;
 
-    cout << endl << "Enter character for next number: " << endl;
+    
     string temp;
+
+    srand (time(NULL));
 
     vector<bool> nums(75, false);
 
@@ -67,6 +71,8 @@ int main()
         printPlayerCard(temp);
         
     }
+
+    cout << endl << "Enter character for next number: " << endl;
 
     int count = 0;
     while(cin >> temp && count < 75)
